@@ -445,6 +445,7 @@ nav {
     padding: 60px 5% 30px;
     max-width: 1000px;
     margin: 0 auto;
+    overflow: hidden;
 }
 
 .contact-content {
@@ -452,6 +453,8 @@ nav {
     grid-template-columns: 1fr 1fr;
     gap: 50px;
     align-items: start;
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
 .contact-info {
@@ -578,8 +581,13 @@ nav {
     }
 
     .hero-photo-panel {
-        min-height: 320px;
+        min-height: 360px;
         padding: 30px;
+    }
+
+    .hero-photo {
+        width: 220px;
+        height: 220px;
     }
 
     .hero-photo {
@@ -643,6 +651,20 @@ nav {
 
     .footer-icons {
         gap: 12px;
+    }
+
+    .contact-form,
+    .contact-form input,
+    .contact-form textarea,
+    .form-submit {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    .form-row {
+        display: flex;
+        flex-direction: column;
     }
 
     .nav-links {
