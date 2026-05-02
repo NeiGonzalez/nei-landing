@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Nei González - Executive Operations Partner | C-Level & Founder Support | Process & Documentation Specialist | Bilingual EN/ES | Remote">
+    <title>Nei González — Executive Operations Partner</title>
+    <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+        <a href="#" class="nav-name" onclick="resetHero(); closeMenu(); return false;"><strong>Nei González</strong></a>
+        <button class="hamburger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#about" onclick="closeMenu()">Sobre mí</a></li>
+            <li><a href="#experience" onclick="closeMenu()">Experiencia</a></li>
+            <li><a href="#skills" onclick="closeMenu()">Habilidades</a></li>
+            <li><a href="#projects" onclick="closeMenu()">Proyectos</a></li>
+            <li><a href="#education" onclick="closeMenu()">Educación</a></li>
+            <li><a href="#certifications" onclick="closeMenu()">Certificaciones</a></li>
+            <li><a href="#contact" onclick="closeMenu()">Contacto</a></li>
+        </ul>
+        <button class="lang-btn" onclick="switchLang()">EN</button>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-overlay"></div>
+
+        <div class="hero-content">
+            <div class="hero-photo-panel" id="photoPanel">
+                <img src="img/perfil.jpg" alt="Nei González" class="hero-photo">
+            </div>
+            <div class="hero-info-panel" id="infoPanel">
+                <h1 class="hero-name"><strong>Nei González</strong></h1>
+                <p class="hero-title"><strong>Executive Operations Partner | Soporte a C-Level y Founders | Especialista en Procesos y Documentación | Bilingüe EN/ES | Remoto</strong></p>
+
+                <div class="hero-contact-item">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                    <span>neigonzalez.ar@gmail.com</span>
+                    <button class="copy-btn" onclick="copyEmail(this)" title="Copiar email">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
+                    </button>
+                    <span class="copy-tooltip">Copiado!</span>
+                </div>
+
+                <div class="hero-contact-item">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                    <span>Trevelin — Chubut — Patagonia Argentina</span>
+                </div>
+
+                <div class="hero-availability">
+                    <strong>Remoto — Disponibilidad completa en zonas horarias de Europa, Reino Unido, Australia, Norteamérica y Asia temprana, incluyendo India.</strong>
+                </div>
+
+                <div class="hero-buttons">
+                    <a href="https://www.linkedin.com/in/nei-gonzalez" target="_blank" rel="noopener" class="hero-btn">
+                        <svg fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                        LinkedIn
+                    </a>
+                    <button class="hero-btn" disabled title="Coming soon">
+                        <svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                        Portfolio
+                    </button>
+                    <a href="cv_es.pdf" download class="hero-btn">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                        <strong>CV</strong>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about section-gray" id="about">
+        <h2 class="section-title"><strong>Sobre mí</strong></h2>
+        <h3 class="about-headline"><strong>Aportando estructura operativa a founders y ejecutivos, transformando la complejidad en sistemas claros y ejecutables.</strong></h3>
+
+        <div class="about-content">
+            <div class="about-block">
+                <p>Con <strong>más de 20 años</strong> trabajando junto a líderes C-level en sectores corporativos, culturales y públicos, opero en la intersección entre ejecución y estructura. Documento, coordino y traduzco necesidades de negocio en procesos que los equipos pueden ejecutar. Bilingüe EN/ES. Remoto 100%.</p>
+                <br>
+                <p>Intervengo donde las operaciones empiezan a perder claridad: flujos de trabajo poco definidos, brechas entre equipos o procesos que existen pero no se sostienen en la ejecución. Identifico esos puntos a tiempo, estructuro y alineo la operación diaria con la intención del negocio.</p>
+            </div>
+
+            <div class="about-block">
+                <p>Mi trabajo combina diseño de procesos, pensamiento funcional y coordinación operativa, adaptándome a distintos entornos — incluyendo Agile cuando es necesario — y utilizando documentación asistida por IA para asegurar consistencia, trazabilidad y usabilidad.</p>
+                <br>
+                <p>Trabajo con foco en responsabilidad sobre los resultados, precisión y continuidad, asegurando que lo definido no solo quede documentado, sino que se ejecute de manera consistente.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="experience section-white animate-columns" id="experience">
+        <h2 class="section-title"><strong>Experiencia</strong></h2>
+
+        <div class="experience-item">
+            <div class="experience-title">
+                <strong>Analista de Operaciones y Procesos</strong><br>
+                Vitality Global · Nov 2025 – Presente · Remoto · Contrato a término
+            </div>
+            <div class="experience-text">
+                Documenté procesos de negocio end-to-end para el lanzamiento de un MVP trabajando directamente con founders, identificando 6 escenarios fuera de alcance que evitaron brechas previas al lanzamiento y permitieron llegar a producción con mayor preparación operativa. Mapeé riesgos de escalabilidad y definí criterios de monitoreo para anticipar cuellos de botella. Refiné estructuras de onboarding (+50% en calidad de datos), estandaricé procesos de ventas bilingües y desarrollé documentación FAQ para reducir fricción. Identifiqué y tracé 17 issues de calidad hasta su resolución en un entorno remoto y cross-funcional.
+            </div>
+        </div>
+
+        <div class="experience-item">
+            <div class="experience-title">
+                <strong>Operaciones y Análisis Funcional</strong><br>
+                Freelance y Formación Continua · 2021 – Oct 2025 · Remoto
+            </div>
+            <div class="experience-text">
+                Completé múltiples certificaciones en análisis funcional, QA, metodologías Agile y coordinación de procesos. Contribuí a dos aplicaciones web (sectores gastronomía y real estate), identificando y gestionando 66 issues funcionales hasta su resolución (34 + 32). El trabajo incluyó documentación de procesos de negocio, estructuración de workflows, definición de requerimientos, coordinación Agile y desarrollo de documentación de usuario para asegurar consistencia en la ejecución.
+            </div>
+        </div>
+
+        <div class="experience-item">
+            <div class="experience-title">
+                <strong>Coordinadora Senior de Operaciones</strong><br>
+                Ministerio de Cultura de la Nación Argentina · 2013 – 2024 · Presencial / Híbrido · Buenos Aires · Argentina
+            </div>
+            <div class="experience-text">
+                Gestioné más de 500 expedientes administrativos de alta complejidad por año con impacto legal y presupuestario, coordinando más de 10 áreas y actores externos. Lideré iniciativas de optimización: reducción de rechazos del 25% al 5%; reducción de tiempos de procesamiento en un 70% (de 10 a 3 días). Referente y formadora certificada en sistema GDE para 20 personas en un entorno de documentación legal no reversible. Sostuve continuidad operativa a través de seis transiciones de liderazgo y cuatro gestiones gubernamentales. Convocada como asesora externa para un director de otro organismo público nacional.
+            </div>
+        </div>
+
+        <div class="experience-item">
+            <div class="experience-title">
+                <strong>Coordinadora de Oficina y Operaciones</strong><br>
+                Ing. Juan O. Durante, Estudio de Agrimensura · 2010 – 2013 · Córdoba, Argentina
+            </div>
+            <div class="experience-text">
+                Gestioné ~25 casos catastrales en simultáneo, incluyendo análisis de documentación legal e investigación de títulos. Diseñé e implementé la estructura administrativa completa del estudio. Mejoré la eficiencia operativa en ~65%, reduciendo los tiempos de aprobación. Identifiqué inconsistencias técnicas en el 70% de los casos revisados y resolví correcciones directamente en AutoCAD.
+            </div>
+        </div>
+
+        <div class="experience-item">
+            <div class="experience-title">
+                <strong>Secretaria Ejecutiva Bilingüe Senior y Operaciones</strong><br>
+                Tango Rally Team (Linal S.A.) · 2006 – 2007
+            </div>
+            <div class="experience-text">
+                Gestioné el 100% de las operaciones internacionales de importación/exportación para un equipo profesional de rally (~20 acciones en múltiples países). Interfaz principal en inglés con Mitsubishi Motors Japón y proveedores en Nueva Zelanda, Italia y Estados Unidos. Coordiné logística integral de viajes y operaciones para todo el equipo en competencias nacionales e internacionales.
+            </div>
+        </div>
+
+        <div class="experience-item">
+            <div class="experience-title">
+                <strong>Asistente Ejecutiva Bilingüe Senior del CEO</strong><br>
+                Neverland (Ares S.A., 1998 – 2001) · (Galactronic S.A., 1994 – 1997)
+            </div>
+            <div class="experience-text">
+                Rol progresivo en dos entidades legales del mismo grupo empresarial, operador de una red líder de centros de entretenimiento familiar en Argentina. Gestioné comunicación internacional con más de 40 proveedores en EE.UU., Europa y Asia (Sega, Nintendo, Disney, Namco, Zamperla): compras, contratos, facturación, logística de importación y transporte, gestionando el 95% de la comunicación externa. Soporte ejecutivo completo al CEO, incluyendo viajes internacionales complejos, resolución de problemas en tiempo real y traducción del 100% de manuales técnicos y contratos comerciales.
+            </div>
+        </div>
+
+        <div class="experience-item">
+            <div class="experience-title">
+                <strong>Secretaria Ejecutiva Bilingüe Senior</strong><br>
+                PricewaterhouseCoopers (PwC) · 1997 – 1998 · Córdoba, Argentina
+            </div>
+            <div class="experience-text">
+                Soporte ejecutivo y administrativo a cuatro gerentes senior en la oficina regional de Córdoba, bajo estándares internacionales de calidad, documentación y compliance. Base de trabajo centrada en precisión, trazabilidad y ejecución disciplinada.
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="experience section-gray animate-columns" id="skills">
+        <h2 class="section-title"><strong>Habilidades</strong></h2>
+
+        <div class="experience-item">
+            <div class="experience-title">
+                <strong>Idiomas</strong>
+            </div>
+            <div class="experience-text">
+                <strong>Español</strong> — Nativo<br>
+                <strong>Inglés</strong> — Nivel profesional. Certificado B2 (G-Telp, San Diego State University), con comprensión activa diaria a nivel C1: conferencias, podcasts, comunicación de negocios y lectura profesional.<br>
+                <strong>Italiano</strong> — Comprensión lectora básica<br>
+                <strong>Portugués</strong> — Comprensión lectora básica
+            </div>
+        </div>
+
+        <div class="experience-item">
+            <div class="experience-title">
+                <strong>Herramientas de IA</strong>
+            </div>
+            <div class="experience-text">
+                Claude (Anthropic), ChatGPT (OpenAI), DeepSeek (DeepSeek AI): documentación, investigación, redacción, edición y soporte de workflows<br>
+                Gemini / Google (Nano Banana): generación de contenido visual<br>
+                Kimi (Moonshot AI): desarrollo de interfaces web
+            </div>
+        </div>
+
+        <div class="experience-item">
+            <div class="experience-title">
+                <strong>Habilidades Blandas</strong>
+            </div>
+            <div class="experience-text">
+                Resolución de problemas • Adaptabilidad • Atención al detalle • Pensamiento analítico • Comunicación • Gestión del tiempo • Organización • Gestión de stakeholders • Discreción y confidencialidad • Identificación proactiva de brechas • Comunicación intercultural • Enfoque en soluciones
+            </div>
+        </div>
+
+        <div class="experience-item">
+            <div class="experience-title">
+                <strong>Procesos y Operaciones</strong>
+            </div>
+            <div class="experience-text">
+                Optimización de workflows • Coordinación cross-funcional • Documentación de procesos de negocio • Desarrollo de Procedimiento de Operaciones • Requerimientos funcionales • Análisis de negocio • Control de calidad • Auditoría operativa • Planificación de escalabilidad • Coordinación de viajes
+            </div>
+        </div>
+
+        <div class="experience-item">
+            <div class="experience-title">
+                <strong>Herramientas de Productividad y Colaboración</strong>
+            </div>
+            <div class="experience-text">
+                Microsoft Office (Excel, Word) • Google Workspace • Notion • ClickUp • Jira • Trello • Slack • Zoom • Discord • GitHub
+            </div>
+        </div>
+
+        <div class="experience-item">
+            <div class="experience-title">
+                <strong>Metodologías</strong>
+            </div>
+            <div class="experience-text">
+                Agile • Scrum • LEAN / Kanban / Mejora continua
+            </div>
+        </div>
+
+        <div class="experience-item">
+            <div class="experience-title">
+                <strong>Tecnología y Testing</strong>
+            </div>
+            <div class="experience-text">
+                Quality Assurance (Testing Manual) • Epics / User Stories • Casos de prueba y ejecución • Reporte de bugs y gestión de defectos • Documentación técnica • Conocimientos base en lenguajes fuertemente tipados y bases de datos relacionales aplicados a soporte operativo no técnico, documentación y trabajo con equipos de desarrollo.
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="experience section-white animate-columns" id="projects">
+        <h2 class="section-title"><strong>Proyectos</strong></h2>
+
+        <div class="experience-item">
+            <div class="experience-title">
+                <strong>Aplicación Web Alumni — Proyecto Final de Bootcamp</strong><br>
+                Egg Cooperation · 2022
+            </div>
+            <div class="experience-text">
+                Aplicación web para estudiantes y egresados de una institución educativa privada — concepto original desarrollado y propuesto por mí, identificando una necesidad no cubierta en el mercado. Contribuí en documentación, requerimientos de usuario y criterios de usabilidad. Autora del documento de Análisis de Negocio y Alcance, y del Manual de Usuario. Posteriormente me integré al equipo de desarrollo, colaboré en frontend y asumí el rol de Scrum Master, coordinando dailies y ceremonias.
+            </div>
+        </div>
+
+        <div class="experience-item">
+            <div class="experience-title">
+                <strong>Artista Visual y Productora Cultural</strong><br>
+                Nei González - Proyectos Independientes · 1991 – Presente
+            </div>
+            <div class="experience-text">
+                Práctica artística desarrollada en paralelo a roles profesionales en operaciones, con participación en más de 25 exposiciones individuales y colectivas en galerías, museos y espacios públicos en Argentina. Obras en colecciones privadas e institucionales.
+                <br><br>
+                Esta práctica se sostiene en paralelo a una carrera en entornos operativos, reflejando trabajo continuo en producción estructurada, resolución de problemas y ejecución en múltiples contextos.
+                <br><br>
+                Incluye producción completa de proyectos artísticos, desde conceptualización hasta ejecución técnica, diseño de montaje y producción de exhibiciones, así como coordinación con otros artistas e instituciones.
+                <br><br>
+                Cada proyecto implica la gestión simultánea de múltiples capas operativas: coherencia conceptual, decisiones técnicas, planificación de producción, logística de montaje y estrategia de difusión.
+                <br><br>
+                Destacados: Segunda Mención en el Concurso Nacional de Escultura de Gran Formato <em class="highlight-note">(colectivo con R. Viotto)</em>, Universidad Siglo 21 (2024). Obra seleccionada por la Municipalidad de Córdoba para la Plazoleta de las Esculturas <em class="highlight-note">(colectivo con R. Viotto y E. Bisaro)</em> (2023). Participación en instalación de Tino Sehgal en MALBA, Buenos Aires (2015). Miembro fundadora del colectivo El Caldero, único proyecto de artes visuales en la grilla oficial de actividades por el Bicentenario de la Revolución de Mayo (2010) en la Ciudad de Córdoba.
+            </div>
+        </div>
+
+        <div class="experience-item">
+            <div class="experience-title">
+                <strong>Artesana y Productora Creativa Independiente</strong><br>
+                Nei Borgh - Proyectos de Diseño y Producción · 2001 – 2009
+            </div>
+            <div class="experience-text">
+                Desarrollo y producción independiente de objetos de diseño artesanal con técnica de grabado, comercializados en ferias y canales de diseño en Córdoba y Buenos Aires, con clientela internacional.
+                <br><br>
+                Actividad gestionada de forma integral: diseño, abastecimiento, producción, pricing, ventas y relación con clientes.
+                <br><br>
+                Enfoque en consistencia de producto, identidad de diseño y estándares de calidad.
+                <br><br>
+                Incluyó toma constante de decisiones operativas: gestión de stock, organización de workflow, negociación comercial y atención directa a clientes.
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section class="education section-gray" id="education">
+        <h2 class="section-title"><strong>Educación</strong></h2>
+
+        <div class="education-item">
+            <div class="education-title">
+                <strong>Diplomatura de Posgrado en Gestión y Producción Cultural</strong><br>
+                Universidad Blas Pascal (UBP)
+            </div>
+            <div class="education-text">
+                Planificación de proyectos · Producción de eventos · Coordinación de equipos · Gestión de presupuestos · Logística · Aspectos legales y administrativos · Patrocinio · Comunicación.<br><br>Tesis final sobre Regulaciones Aduaneras Argentinas en la comercialización internacional de obras de arte.
+            </div>
+        </div>
+
+        <div class="education-item">
+            <div class="education-title">
+                <strong>Profesorado en Artes Visuales — Especialidad Escultura</strong><br>
+                Escuela Provincial Superior de Artes Visuales de Entre Ríos
+            </div>
+            <div class="education-text">
+                Carrera de cuatro años que combina práctica artística, teoría educativa y especialización en escultura.
+            </div>
+        </div>
+
+        <div class="education-item">
+            <div class="education-title">
+                <strong>Estudios en Gestión Organizacional y Liderazgo (Incompleto)</strong><br>
+                Universidad Nacional de San Martín (UNSAM)
+            </div>
+            <div class="education-text">
+                Gestión institucional · Recursos humanos · Liderazgo y negociación · Marketing · Derecho organizacional.
+            </div>
+        </div>
+
+        <div class="education-item">
+            <div class="education-title">
+                <strong>Ingeniería — Construcciones (Incompleto, 4 años)</strong><br>
+                Universidad Tecnológica Nacional (UTN)
+            </div>
+            <div class="education-text">
+                Formación en pensamiento sistemático y procesos · Análisis técnico · Validación de información compleja.<br><br>Áreas: Análisis Estructural · Dibujo Técnico · Matemática Avanzada · Física Aplicada.
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section class="experience section-white animate-columns" id="certifications">
+        <h2 class="section-title"><strong>Certificaciones</strong></h2>
+
+        <div class="experience-item">
+            <div class="experience-title">
+                <strong>Administración, Operaciones y Análisis de Procesos</strong>
+            </div>
+            <div class="experience-text">
+                Certificación en Fundamentos de Project Management - PMI Perspective - 2023 - soylider.net<br>
+                Analista Funcional – Asistente Educativa - EIDOS Global & Bid Lab - 2024<br>
+                Curso de Gestión de Procesos – Introducción a la Calidad - 2000<br>
+                Capacitaciones en normativa de la Administración Pública Nacional Argentina — formación en herramientas de oficina y documentación (MS Office, Linux, OpenOffice, redacción oficial) y cursos de historia del arte, gestión cultural y políticas culturales — INAP · 2013 – 2024
+            </div>
+        </div>
+
+        <div class="experience-item">
+            <div class="experience-title">
+                <strong>Quality Assurance y Metodologías Agile</strong>
+            </div>
+            <div class="experience-text">
+                Testing QA - EIDOS Global & Bid Lab - 2024<br>
+                Testing Funcional de Software - 2023 - Chicos.net y The Coca Cola Co. Argentina<br>
+                ASTFC - 2023 - ISQA<br>
+                SCRUM Fundamentals Certified - 2023<br>
+                Scrum coffee - 2023 - LinkedIn<br>
+                QA Manual Testing - 2023 - Egg<br>
+                Introducción al Testing Manual - 2023 - Egg<br>
+                Selenium Web Driver – Automatización – Instituto Web - 2023<br>
+                Introducción a QA - Udemy – 2022<br>
+                Full Stack Developer - 2021–2022 - Egg
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact section-gray" id="contact">
+        <h2 class="section-title"><strong>Contacto</strong></h2>
+
+        <div class="contact-content">
+            <div class="contact-info animate-contact">
+                <div class="contact-item">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                    <span>neigonzalez.ar@gmail.com</span>
+                    <button class="copy-btn" onclick="copyEmail(this)" title="Copiar email">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
+                    </button>
+                    <span class="copy-tooltip">Copiado!</span>
+                </div>
+                <div class="contact-item">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                    <span>Trevelin — Chubut — Patagonia Argentina</span>
+                </div>
+                <div class="contact-item">
+                    <svg fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                    <a href="https://www.linkedin.com/in/nei-gonzalez" target="_blank" rel="noopener">linkedin.com/in/nei-gonzalez</a>
+                </div>
+            </div>
+
+            <form class="contact-form" id="contactForm" action="https://formspree.io/f/xgodwqaw" method="POST" novalidate>
+                <div class="form-row">
+                    <input type="text" name="name" placeholder="Nombre *" required oninvalid="this.setCustomValidity('Este campo es obligatorio')" oninput="this.setCustomValidity('')">
+                    <input type="email" name="email" placeholder="Email *" required oninvalid="this.setCustomValidity('Ingrese un email válido')" oninput="this.setCustomValidity('')">
+                </div>
+                <input type="text" name="subject" placeholder="Asunto *" required oninvalid="this.setCustomValidity('Este campo es obligatorio')" oninput="this.setCustomValidity('')">
+                <textarea name="message" placeholder="Mensaje *" rows="5" required oninvalid="this.setCustomValidity('Este campo es obligatorio')" oninput="this.setCustomValidity('')"></textarea>
+                <button type="submit" class="form-submit">Enviar mensaje</button>
+                <p class="form-status" id="formStatus"></p>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="footer">
+        <div class="footer-box">
+            <div class="footer-line">
+                <span class="footer-text">Esta landing fue diseñada y desarrollada íntegramente por Nei González utilizando herramientas de IA.</span>
+            </div>
+            <div class="footer-icons">
+                <a href="https://www.linkedin.com/in/nei-gonzalez" target="_blank" rel="noopener" class="footer-icon" title="LinkedIn">
+                    <svg fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                </a>
+                <button class="footer-icon" onclick="githubPlaceholder()" title="Portfolio próximamente">
+                    <svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                </button>
+                <a href="cv_es.pdf" download class="footer-icon" title="Descargar CV">
+                    <strong>CV</strong>
+                </a>
+            </div>
+            <div class="footer-image-credit">
+                Imagen de Home y Footer: detalle de "Inmunitas - IX", 2021. Pintura original de Nei González
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+
+</body>
+</html>

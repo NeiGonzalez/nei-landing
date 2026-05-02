@@ -35,7 +35,7 @@ function switchLang() {
 
 // GitHub placeholder
 function githubPlaceholder() {
-    alert('Portfolio coming soon');
+    alert('Portfolio próximamente');
 }
 
 // Toggle mobile menu
@@ -116,18 +116,18 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
 
                 if (response.ok) {
-                    status.textContent = 'Message sent successfully!';
+                    status.textContent = '¡Mensaje enviado correctamente!';
                     status.style.color = '#4a7c59';
                     form.reset();
                     setTimeout(() => {
                         status.textContent = '';
                     }, 3000);
                 } else {
-                    status.textContent = 'Something went wrong. Please try again.';
+                    status.textContent = 'Ocurrió un error. Intente nuevamente.';
                     status.style.color = '#c0392b';
                 }
             } catch (error) {
-                status.textContent = 'Something went wrong. Please try again.';
+                status.textContent = 'Ocurrió un error. Intente nuevamente.';
                 status.style.color = '#c0392b';
             }
         });
