@@ -63,22 +63,45 @@ document.addEventListener('click', (e) => {
 });
 
 // Reset hero animation
+let heroResetInProgress = false;
+
 function resetHero() {
+    if (heroResetInProgress) return false;
+    heroResetInProgress = true;
+
     const hero = document.getElementById('hero');
     const photoPanel = document.getElementById('photoPanel');
     const infoPanel = document.getElementById('infoPanel');
 
+    // Resetear estado
     hero.classList.remove('loaded');
+
+    // Forzar remoción completa de la animación
     photoPanel.style.animation = 'none';
     infoPanel.style.animation = 'none';
-    photoPanel.offsetHeight; // Trigger reflow
-    infoPanel.offsetHeight; // Trigger reflow
+    photoPanel.style.transform = 'translateX(-100vw)';
+    infoPanel.style.transform = 'translateX(100vw)';
 
-    setTimeout(() => {
-        photoPanel.style.animation = '';
-        infoPanel.style.animation = '';
-        hero.classList.add('loaded');
-    }, 100);
+    // Forzar reflow sincrónico con void operator
+    void photoPanel.offsetWidth;
+    void infoPanel.offsetWidth;
+
+    // Pequeña pausa para asegurar que el navegador procesó el reflow
+    requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+            // Restaurar animaciones
+            photoPanel.style.animation = '';
+            infoPanel.style.animation = '';
+            photoPanel.style.transform = '';
+            infoPanel.style.transform = '';
+
+            // Activar loaded después de que las animaciones comiencen
+            setTimeout(() => {
+                hero.classList.add('loaded');
+                heroResetInProgress = false;
+            }, 350);
+        });
+    });
 
     window.scrollTo({ top: 0, behavior: 'smooth' });
     return false;

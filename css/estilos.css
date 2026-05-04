@@ -157,14 +157,16 @@ nav {
     height: 340px;
     gap: 0;
     margin-top: 25px;
+    overflow: visible;
 }
 
 /* Left Panel - Photo */
 .hero-photo-panel {
     background: var(--white);
     width: 50%;
+    min-width: 50%;
     min-height: 340px;
-    display: flex;
+    display: flex !important;
     align-items: center;
     justify-content: center;
     transform: translateX(-100vw);
@@ -172,6 +174,8 @@ nav {
     animation-delay: 0.3s;
     box-shadow: 0 20px 60px rgba(0,0,0,0.15);
     padding: 30px;
+    will-change: transform;
+    flex-shrink: 0;
 }
 
 .hero-photo {
@@ -187,15 +191,20 @@ nav {
 .hero-info-panel {
     background: var(--white);
     width: 50%;
+    min-width: 50%;
     min-height: 340px;
     padding: 30px 30px;
-    display: flex;
+    display: flex !important;
     flex-direction: column;
     justify-content: center;
     transform: translateX(100vw);
     animation: slideFromRight 2.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
     animation-delay: 0.3s;
     box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+    will-change: transform;
+    flex-shrink: 0;
+    overflow: hidden;
+    box-sizing: border-box;
 }
 
 .hero-name {
@@ -215,6 +224,12 @@ nav {
     letter-spacing: 1.5px;
     margin-bottom: 16px;
     line-height: 1.5;
+    max-width: 100%;
+    word-break: normal;
+    overflow-wrap: break-word;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
 }
 
 .hero-contact-item {
