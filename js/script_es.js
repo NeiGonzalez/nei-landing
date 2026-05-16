@@ -35,7 +35,7 @@ function switchLang() {
 
 // GitHub placeholder
 function githubPlaceholder() {
-    alert('Portfolio coming soon');
+    alert('Portfolio próximamente');
 }
 
 // Toggle mobile menu

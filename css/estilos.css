@@ -40,7 +40,7 @@ nav {
 }
 
 .nav-name {
-    font-size: 1.2rem;
+    font-size: 1.35rem;
     font-weight: 600;
     color: var(--navy);
     letter-spacing: 1px;
@@ -78,8 +78,8 @@ nav {
 .nav-links a {
     text-decoration: none;
     color: var(--text);
-    font-size: 0.65rem;
-    font-weight: 300;
+    font-size: 0.72rem;
+    font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 1.5px;
     transition: color 0.2s;
@@ -87,7 +87,7 @@ nav {
 }
 
 .nav-links a:hover {
-    color: var(--navy);
+    color: var(--navy-light);
 }
 
 .lang-btn {
@@ -179,8 +179,8 @@ nav {
 }
 
 .hero-photo {
-    width: 260px;
-    height: 260px;
+    width: 280px;
+    height: 280px;
     border-radius: 50%;
     object-fit: cover;
     border: 3px solid var(--white);
