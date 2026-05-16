@@ -741,7 +741,7 @@ nav {
     line-height: 1.7;
     color: var(--text);
     font-weight: 300;
-    text-align: justify;
+    text-align: center;
     margin: 0 auto;
 }
 
