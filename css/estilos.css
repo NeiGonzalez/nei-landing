@@ -87,7 +87,11 @@ nav {
 }
 
 .nav-links a:hover {
-    color: var(--navy-light);
+    color: var(--navy);
+    background: rgba(45, 58, 92, 0.08);
+    border-radius: 4px;
+    padding: 4px 8px;
+    margin: -4px -8px;
 }
 
 .lang-btn {
