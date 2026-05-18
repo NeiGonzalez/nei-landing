@@ -459,6 +459,11 @@ nav {
     text-align: justify;
 }
 
+.experience-text strong {
+    font-weight: 600;
+    color: var(--navy);
+}
+
 /* ===== CONTACT SECTION ===== */
 .contact {
     padding: 60px 5% 30px;
