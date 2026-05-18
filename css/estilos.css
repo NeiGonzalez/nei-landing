@@ -40,7 +40,7 @@ nav {
 }
 
 .nav-name {
-    font-size: 1.35rem;
+    font-size: 1.5rem;
     font-weight: 600;
     color: var(--navy);
     letter-spacing: 1px;
@@ -78,7 +78,7 @@ nav {
 .nav-links a {
     text-decoration: none;
     color: var(--text);
-    font-size: 0.72rem;
+    font-size: 0.78rem;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 1.5px;
