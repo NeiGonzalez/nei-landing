@@ -10,6 +10,17 @@
 }
 
 /* ===== RESET ===== */
+/* ===== MOBILE COMPATIBILITY FIXES ===== */
+* {
+    -webkit-tap-highlight-color: transparent;
+}
+
+button, input, textarea, select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
 * {
     margin: 0;
     padding: 0;
